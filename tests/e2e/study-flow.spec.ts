@@ -189,9 +189,10 @@ test.describe('PocketSRS Study Flow & Navigation', () => {
     const studyDeckBtn = page.locator('[data-testid="deck-node-test-multichar-deck"] button:has-text("Study")').first();
     await studyDeckBtn.click();
 
-    // Ensure Writing Mode / Scratchpad is active
-    if (!(await page.locator('text=Character:').isVisible())) {
-      const writingToggle = page.locator('button[title*="Writing Mode"]');
+    // Ensure study view is loaded and Writing Mode is ON
+    const writingToggle = page.locator('button[title*="Toggle Writing Mode (W)"]');
+    await expect(writingToggle).toBeVisible();
+    if (await page.locator('button:has-text("Writing Mode OFF")').isVisible()) {
       await writingToggle.click();
     }
 
