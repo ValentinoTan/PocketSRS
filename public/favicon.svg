@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pocketsrs-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#4338ca" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#312e81" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Container -->
+  <rect x="32" y="32" width="448" height="448" rx="112" fill="url(#pocketsrs-grad)" filter="url(#shadow)" />
+
+  <!-- Backing Card Deck Layer -->
+  <rect x="112" y="104" width="288" height="240" rx="28" fill="#818cf8" opacity="0.35" transform="rotate(-6 256 224)" />
+
+  <!-- Front Flashcard -->
+  <rect x="112" y="128" width="288" height="256" rx="32" fill="#ffffff" />
+
+  <!-- Spaced Repetition Exponential Curve Accent -->
+  <path d="M 152 320 C 210 315, 270 260, 350 170" fill="none" stroke="#4f46e5" stroke-width="14" stroke-linecap="round" />
+  
+  <!-- FSRS Sparkle Node -->
+  <circle cx="350" cy="170" r="14" fill="#f59e0b" />
+  
+  <!-- Mini Kanji / Character Accent Lines -->
+  <rect x="160" y="180" width="80" height="12" rx="6" fill="#cbd5e1" />
+  <rect x="160" y="210" width="120" height="10" rx="5" fill="#e2e8f0" />
+</svg>
